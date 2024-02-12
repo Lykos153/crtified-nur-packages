@@ -32,7 +32,7 @@ def main [--output (-o): string] {
   rm -rf $dir
 
   if $output != "" {
-    $result | to json | save $output
+    $result | to json | save --force $output
     print $"Stored result in ($output)"
   } else {
     $result
